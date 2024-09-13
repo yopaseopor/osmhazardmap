@@ -1,0 +1,38 @@
+   {
+   	"data_format": 1,
+   	"data_url": "https://raw.githubusercontent.com/yopaseopor/osmpoismap/master/taginfo/taginfo_osmpoismap.json",
+   	"project": {
+   		"name": "OSM POIs Map",
+   		"description": "OSM Pois Map are some Openlayers' maps based on Bicycle tags map that show you OSM data about a specific tag=value with an specific icon, text and render (not only OSM Carto).",
+   		"project_url": "https://wiki.openstreetmap.org/wiki/OSM_POIs_Map",
+   		"doc_url": "https://wiki.openstreetmap.org/wiki/OSM_POIs_Map#Variations",
+   		"icon_url": "https://yopaseopor.github.io/osmpoismap/src/img/icones_web/osmpoismap_logo.svg",
+   		"contact_name": "yopaseopor",
+   		"contact_email": "yopaseopor@gmail.com"
+   	},
+   	"tags": [{
+"key": "shop",
+"value": "supermarket",
+"object_types": ["way", "area", "node", "relation"],
+"description": "",
+"doc_url": "",
+"icon_url": "https://raw.githubusercontent.com/yopaseopor/beta_style_josm/master/BY/BY_1.1.png"
+}, {
+"key": "amenity",
+"value": "cafe",
+"object_types": ["way", "area", "node", "relation"],
+"description": "",
+"doc_url": "",
+"icon_url": "https://raw.githubusercontent.com/yopaseopor/beta_style_josm/master/BY/BY_1.10.png"
+}, {
+
+   			"key": "traffic_sign:forward",
+   			"value": "SE:X6-1",
+   			"object_types": ["way", "area", "node", "relation"],
+   			"description": "",
+   			"doc_url": "",
+   			"icon_url": "https://raw.githubusercontent.com/yopaseopor/beta_style_josm/master/traffic_signs_EUR/SE/SE_X6-1.png"
+   		}
+
+   	]
+   }
