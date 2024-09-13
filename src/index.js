@@ -2,7 +2,7 @@
 $(function () {
 	$('#map').empty(); // Remove Javascript required message
 	var baseLayerIndex = 0;
-	
+
 	//Object to manage the spinner layer
 	var loading = {
 		init: function () {
@@ -136,8 +136,6 @@ $(function () {
 		window.location.hash.replace(/[#?&]+([^=&]+)=([^&]*)/gi, function(m, key, value) {
 			vars[key] = value;
 		});
-		
-		
 
 		// map = zoom, center (lon, lat), [rotation]
 		var mapParam = getUrlParam('map', ''), parts;
@@ -299,9 +297,6 @@ $(function () {
 	}));
 	map.addControl(new ol.control.ScaleLine({units: config.initialConfig.units}));
 	map.addControl(new ol.control.ZoomSlider());
-	
-
-
 
 	// Geolocation Control
 	// In some browsers, this feature is available only in secure contexts (HTTPS)
@@ -332,23 +327,11 @@ $(function () {
 	map.addControl(new ol.control.Control({
 		element: geolocationControlBuild()
 	}));
-	
-	
-	// Como crear un control
-	//@@ poner un número extra a la var | var infoControlBuild2 = function () {
-	//@@ revisar osmcat-infobutton2 	var container = $('<div>').addClass('ol-control ol-unselectable osmcat-infobutton2').html($('<button type="button"><i class="fa fa-search-plus"></i></button>').on('click', function () {
-	//		window.location.href = 'https://mapcomplete.osm.be/index.html?userlayout=https://raw.githubusercontent.com/yopaseopor/mcquests/master/limits.json';
-	//	}));
-	//	return container[0];
-	//};
-	//map.addControl(new ol.control.Control({
-	//	element: infoControlBuild2()
-	//}));
 
 	// Info Control
 	var infoControlBuild = function () {
 		var container = $('<div>').addClass('ol-control ol-unselectable osmcat-infobutton').html($('<button type="button"><i class="fa fa-info-circle"></i></button>').on('click', function () {
-			window.location.href = 'https://github.com/yopaseopor/osmpoismap';
+			window.location.href = 'https://github.com/yopaseopor/osmlimitsmap';
 		}));
 		return container[0];
 	};
@@ -356,6 +339,17 @@ $(function () {
 		element: infoControlBuild()
 	}));
 	
+		// Info Control
+	var infoControlBuild2 = function () {
+		var container = $('<div>').addClass('ol-control ol-unselectable osmcat-infobutton2').html($('<button type="button"><i class="fa fa-search-plus"></i></button>').on('click', function () {
+			window.location.href = 'https://mapcomplete.osm.be/index.html?userlayout=https://raw.githubusercontent.com/yopaseopor/mcquests/master/limits.json';
+		}));
+		return container[0];
+	};
+	map.addControl(new ol.control.Control({
+		element: infoControlBuild2()
+	}));
+
 	// Copy permalink button
 	var permalinkControlBuild = function () {
 		var container = $('<div>').addClass('ol-control ol-unselectable osmcat-sharebutton').html($('<button type="button"><i class="fa fa-share-alt-square"></i></button>').on('click', function () {
@@ -387,7 +381,6 @@ $(function () {
 	map.addControl(new ol.control.Control({
 		element: permalinkControlBuild()
 	}));
-
 
 	// Rotate left button
 	var rotateleftControlBuild = function () {
